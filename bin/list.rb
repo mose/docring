@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-#
-require 'rubygems'
+
+require 'bundler/setup'
 require 'google/apis/drive_v3'
 require 'googleauth'
 require 'googleauth/stores/file_token_store'
@@ -9,8 +9,8 @@ require 'fileutils'
 require 'awesome_print'
 
 OOB_URI = 'urn:ietf:wg:oauth:2.0:oob'
-APPLICATION_NAME = 'Drive API Ruby Quickstart'
-CLIENT_SECRETS_PATH = File.expand_path('../../client_secret.json', __FILE__)
+APPLICATION_NAME = 'List Drive Files'
+CLIENT_SECRETS_PATH = File.expand_path('../../config/client_secret.json', __FILE__)
 CREDENTIALS_PATH = File.join(Dir.home, '.credentials', "drive-ruby-quickstart.yaml")
 SCOPE = Google::Apis::DriveV3::AUTH_DRIVE_METADATA_READONLY
 
