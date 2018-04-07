@@ -15,7 +15,7 @@ gem 'jbuilder', '~> 2.5'
 # auth
 gem 'devise', '~> 4.4.3'
 gem 'omniauth'
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '~> 1.5.0', require: false
 gem 'omniauth-google-oauth2'
 
 # plugins
