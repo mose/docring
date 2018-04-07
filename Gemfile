@@ -12,6 +12,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 
+# react / js
+gem 'webpacker', '~> 3.4'
+gem 'react-rails'
+
 # auth
 gem 'devise', '~> 4.4.3'
 gem 'omniauth'
