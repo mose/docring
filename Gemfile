@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
 gem 'rails', '~> 5.1.6'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'
@@ -12,9 +17,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 
-# react / js
-gem 'webpacker', '~> 3.4'
-gem 'react-rails'
 
 # auth
 gem 'devise', '~> 4.4.3'
@@ -24,6 +26,10 @@ gem 'omniauth-google-oauth2'
 
 # plugins
 gem 'google-api-client'
+
+# react / js
+gem 'webpacker'
+gem 'react-rails'
 
 group :development do
   gem 'awesome_print'
